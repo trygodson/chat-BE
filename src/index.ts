@@ -24,7 +24,7 @@ server.listen(PORT, () => {
 
 const io = new Server(server, {
   cors: {
-    origin: 'https://chatter-fe.herokuapp.com',
+    origin: 'https://soft-salmiakki-9da3a5.netlify.app/',
     credentials: true,
   },
 });
