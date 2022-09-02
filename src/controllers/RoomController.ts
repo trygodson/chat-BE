@@ -20,7 +20,7 @@ export const CreateRoom = async (req: Request, res: Response, next: NextFunction
         name: name,
         users: [user._id, ...roomusers],
         userId: user._id,
-      });
+      }).then(res => res.populate('users'));
 
       return res.status(200).json(result);
     }
