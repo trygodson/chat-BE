@@ -7,6 +7,7 @@ export default async (app: Application) => {
     cors({
       origin: 'https://chat-fe.vercel.app',
       methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+      allowedHeaders: '*',
       credentials: true,
     }),
   );
