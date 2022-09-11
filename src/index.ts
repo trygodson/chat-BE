@@ -11,7 +11,7 @@ declare global {
   var onlineUsers: Map<string, any>;
 }
 
-const deployed = 'https://soft-salmiakki-9da3a5.netlify.app/';
+const deployed = 'https://chatter-fe.herokuapp.com/';
 
 dotenv.config();
 const app = express();
