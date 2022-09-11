@@ -11,7 +11,7 @@ declare global {
   var onlineUsers: Map<string, any>;
 }
 
-// const deployed = 'https://soft-salmiakki-9da3a5.netlify.app/';
+const deployed = 'https://soft-salmiakki-9da3a5.netlify.app/';
 
 dotenv.config();
 const app = express();
@@ -20,7 +20,7 @@ const startServer = async () => {
   await DbConnection();
   const io = new Server(server, {
     cors: {
-      origin: 'https://soft-salmiakki-9da3a5.netlify.app/',
+      origin: deployed,
       credentials: true,
     },
   });

@@ -47,8 +47,11 @@ function socket({ io }: { io: Server }) {
      * When a user sends a room message
      */
 
-    socket.on('send-msg', ({ to, messages }) => {
-      socket.broadcast.emit('msg-recieve', { to, messages });
+    socket.on('client-entered-room', ({ room }) => {
+      socket.join(room);
+    });
+    socket.on('send-msg', ({ room, sender, message }) => {
+      socket.to(room).emit('msg-recieve', { sender, message });
     });
 
     /*
