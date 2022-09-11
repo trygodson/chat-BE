@@ -11,7 +11,7 @@ declare global {
   var onlineUsers: Map<string, any>;
 }
 
-const deployed = 'https://chatter-fe.herokuapp.com/';
+const deployed = 'https://chat-fe.vercel.app/';
 
 dotenv.config();
 const app = express();
